@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build the System, Then Let AI Play | Built by Lauren</title>
+<meta name="description" content="Design systems are one of the most underrated tools in marketing right now, and they're the reason AI works for me instead of against me.">
+<meta property="og:title" content="Build the System, Then Let AI Play | Built by Lauren">
+<meta property="og:description" content="Design systems are one of the most underrated tools in marketing right now, and they're the reason AI works for me instead of against me.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%23EE5585' stroke='%2316132B' stroke-width='4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#F5F1EA}
+h1,h2,h3,h4{text-wrap:balance}
+p,li,figcaption,blockquote{text-wrap:pretty}
+a{color:#16132B}a:hover{color:#16132B}
+.btn{transition:transform .15s ease, box-shadow .15s ease}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 #16132B !important}
+.btn-l:hover{box-shadow:7px 7px 0 #F5F1EA !important}
+.btn:focus-visible{outline:3px solid #EE5585;outline-offset:3px}
+.navlink{text-decoration:none}
+.navlink:hover{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
+.card{transition:transform .25s ease, box-shadow .25s ease}
+.card:hover{transform:translate(-3px,-5px) rotate(-.4deg);box-shadow:10px 11px 0 #16132B !important}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-14px) rotate(var(--r,0deg))}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes twinkle{0%,100%{transform:scale(1) rotate(0deg);opacity:1}50%{transform:scale(.55) rotate(45deg);opacity:.55}}
+@keyframes rise{from{opacity:0;transform:translateY(42px)}to{opacity:1;transform:none}}
+@keyframes scrollShot{0%,6%{object-position:50% 0%}94%,100%{object-position:50% 100%}}
+@keyframes wiggle{0%,100%{transform:rotate(var(--r,-4deg))}50%{transform:rotate(calc(var(--r,-4deg) * -1))}}
+@keyframes pop{0%{transform:scale(.4);opacity:0}70%{transform:scale(1.08);opacity:1}100%{transform:scale(1);opacity:1}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(238,85,133,.7)}70%{box-shadow:0 0 0 12px rgba(238,85,133,0)}}
+@keyframes underline{from{stroke-dashoffset:400}to{stroke-dashoffset:0}}
+.marquee{display:flex;width:max-content;animation:marquee 34s linear infinite}
+.drift{display:flex;width:max-content;animation:marquee 46s linear infinite}
+.bob{animation:bob 5.5s ease-in-out infinite}
+.bob2{animation:bob 7s ease-in-out infinite;animation-delay:-2s}
+.spin{animation:spin 20s linear infinite}
+.twinkle{animation:twinkle 2.8s ease-in-out infinite}
+.word{display:inline-block;animation:rise .8s cubic-bezier(.2,.8,.2,1) both}
+.scrollshot{animation:scrollShot var(--dur,24s) ease-in-out infinite alternate}
+.wiggle{animation:wiggle 3.2s ease-in-out infinite}
+.pop{animation:pop .8s cubic-bezier(.2,.8,.2,1) both}
+.pulse{animation:pulse 1.8s ease-out infinite}
+.squiggle path{stroke-dasharray:400;animation:underline 1.6s ease-out .6s both}
+@supports (animation-timeline: view()){
+@keyframes revealIn{0%{opacity:0;transform:translateY(42px)}45%,100%{opacity:1;transform:none}}
+.reveal{animation:revealIn linear both;animation-timeline:view();animation-range:entry 0% entry 100%}
+}
+.still *{animation:none !important}
+@media (prefers-reduced-motion: reduce){*{animation:none !important}}
+@media (max-width: 760px){
+.mc{text-align:center !important;align-items:center !important;justify-content:center !important}
+.featgrid{grid-template-columns:minmax(0,1fr) !important}
+.wide{grid-column:auto !important}
+.hide-m{display:none !important}
+.post-h1{font-size:calc((100vw - 44px) / 8.5) !important}
+.post-h1 .word{white-space:nowrap}
+.hero-phone{right:-6px !important;width:118px !important;height:240px !important}
+}
+.prose p{margin:0 0 22px;font-size:19px;line-height:1.7}
+.prose h2{margin:56px 0 18px;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(30px,3.4vw,40px);line-height:1.05;letter-spacing:-0.02em}
+.prose ul,.prose ol{margin:0 0 24px;padding-left:24px;font-size:19px;line-height:1.7}
+.prose li{margin-bottom:10px}
+.prose strong{font-weight:700}
+.postlink{text-decoration:none;color:#16132B}
+</style>
+</head>
+<body>
+<div class="moving" style="background: #F5F1EA; color: #16132B; font-family: 'DM Sans', system-ui, sans-serif; font-size: 17px; line-height: 1.55; overflow-x: hidden">
+<header class="mc" style="max-width: 1240px; margin: 0 auto; padding: 28px clamp(20px, 4vw, 48px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px">
+<a href="index.html" class="navlink" style="display: flex; align-items: center; gap: 10px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.02em; color: #16132B">
+<span class="pulse" style="width: 16px; height: 16px; border-radius: 50%; background: #EE5585; border: 2.5px solid #16132B; display: inline-block"></span>
+Lauren Mitchell</a>
+<nav aria-label="Main" class="mc" style="display: flex; flex-wrap: wrap; align-items: center; gap: 22px; font-weight: 500; font-size: 16px">
+<a href="index.html" class="navlink" style="color: #16132B">Work</a>
+<a href="blog.html" class="navlink" style="color: #16132B; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 5px">Blog</a>
+<a href="https://www.linkedin.com/in/laurenmitchellksb/" class="btn" style="text-decoration: none; color: #16132B; background: #F4B53F; border: 2.5px solid #16132B; border-radius: 999px; padding: 10px 20px; font-weight: 700; box-shadow: 4px 4px 0 #16132B">LinkedIn</a>
+</nav>
+</header>
+<article style="max-width: 1240px; margin: 0 auto; padding: 20px clamp(20px, 4vw, 48px) 110px">
+<a href="blog.html" class="btn" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #16132B; background: #FFFFFF; border: 2.5px solid #16132B; border-radius: 999px; padding: 9px 18px; font-weight: 700; font-size: 15px; box-shadow: 4px 4px 0 #16132B">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16132B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"></path><path d="M11 18l-6-6 6-6"></path></svg>
+All posts</a>
+<header class="mc" style="max-width: 820px; margin: 40px auto 0; display: flex; flex-direction: column; align-items: flex-start; gap: 18px">
+<div style="font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase">Design systems / AI / 6 min read</div>
+<h1 class="post-h1" style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(46px, 6.4vw, 86px); line-height: 0.96; letter-spacing: -0.035em"><span class="word" style="animation-delay: .05s">Build the System,</span> <span class="word" style="animation-delay: .25s">Then Let</span> <span class="word" style="animation-delay: .45s; background: #F4B53F; padding: 0 0.12em; border-radius: 12px; border: 2.5px solid #16132B; box-shadow: 4px 4px 0 #16132B">AI Play</span></h1>
+<p class="word" style="margin: 0; font-size: 21px; animation-delay: .6s">Design systems are one of the most underrated tools in marketing right now, and they're the reason AI works for me instead of against me.</p>
+<div class="mc" style="display: flex; align-items: center; gap: 12px; margin-top: 6px">
+<img src="images/lauren.jpg" alt="Lauren Mitchell" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2.5px solid #16132B">
+<div style="display: flex; flex-direction: column; text-align: left"><span style="font-weight: 700">Lauren Mitchell</span><span style="font-family: 'Space Mono', monospace; font-size: 13px">November 19, 2026</span></div>
+</div>
+</header>
+<div class="reveal" style="max-width: 1000px; margin: 44px auto 0; border: 2.5px solid #16132B; border-radius: 26px; box-shadow: 8px 8px 0 #16132B; overflow: hidden"><div aria-hidden="true" style="position: relative; height: 360px; background: #16132B; box-sizing: border-box; padding: 36px; display: flex; flex-direction: column; gap: 14px; overflow: hidden">
+<div style="display: flex; gap: 12px; flex: 1"><span class="bob" style="flex: 1; height: 100%; border-radius: 14px; background: #F4B53F; border: 2.5px solid #F5F1EA; animation-delay: -0.0s"></span><span class="bob" style="flex: 1; height: 100%; border-radius: 14px; background: #8FD0EC; border: 2.5px solid #F5F1EA; animation-delay: -0.4s"></span><span class="bob" style="flex: 1; height: 100%; border-radius: 14px; background: #EE5585; border: 2.5px solid #F5F1EA; animation-delay: -0.8s"></span><span class="bob" style="flex: 1; height: 100%; border-radius: 14px; background: #F5F1EA; border: 2.5px solid #F5F1EA; animation-delay: -1.2s"></span></div><div style="display: flex; gap: 12px; flex: 1"><span class="bob" style="flex: 1; height: 100%; border-radius: 14px; background: #FF8A3D; border: 2.5px solid #F5F1EA; animation-delay: -1.6s"></span><span class="bob" style="flex: 1; height: 100%; border-radius: 14px; background: #6CC4F5; border: 2.5px solid #F5F1EA; animation-delay: -2.0s"></span><span class="bob" style="flex: 1; height: 100%; border-radius: 14px; background: #F6D35B; border: 2.5px solid #F5F1EA; animation-delay: -2.4s"></span><span class="bob" style="flex: 1; height: 100%; border-radius: 14px; background: #7CB342; border: 2.5px solid #F5F1EA; animation-delay: -2.8s"></span></div><div style="display: flex; gap: 12px; flex: 1"><span class="bob" style="flex: 1; height: 100%; border-radius: 14px; background: #2A2A2A; border: 2.5px solid #F5F1EA; animation-delay: -3.2s"></span><span class="bob" style="flex: 1; height: 100%; border-radius: 14px; background: #F7931E; border: 2.5px solid #F5F1EA; animation-delay: -3.6s"></span><span class="bob" style="flex: 1; height: 100%; border-radius: 14px; background: #1FA24A; border: 2.5px solid #F5F1EA; animation-delay: -4.0s"></span><span class="bob" style="flex: 1; height: 100%; border-radius: 14px; background: #E3203A; border: 2.5px solid #F5F1EA; animation-delay: -4.4s"></span></div>
+<div class="wiggle" style="--r: -4deg; position: absolute; right: 26px; bottom: 22px; background: #F4B53F; border: 2.5px solid #16132B; border-radius: 12px; padding: 8px 14px; font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; box-shadow: 4px 4px 0 #F5F1EA">tokens.json</div>
+<svg class="twinkle" width="34" height="34" viewBox="0 0 24 24" style="position: absolute; left: 22px; top: 18px"><path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5Z" fill="#F4B53F" stroke="#16132B" stroke-width="1.2"></path></svg>
+</div></div>
+
+<div class="prose" style="max-width: 720px; margin: 56px auto 0">
+<p>My calendar looks pretty similar every season. There's a holiday sale, a new flavor drop and usually a launch or a contest, and every one of them needs emails, site sections, ads and social posts by yesterday.</p>
+<p>Coming up with ideas was never the hard part. What ate my time was rebuilding the same pieces for every campaign and second-guessing small details, like which blue we use or how chunky the button shadow should be.</p>
+<p>So I stopped trying to work faster and started building a system instead.</p>
+
+<h2>What a design system actually is (for marketers)</h2>
+<p>If you come from product design, you probably think of a design system as a component library for an app. The marketing version is simpler and a little scrappier. It's one place that defines how a brand looks, sounds and behaves wherever it shows up.</p>
+<p>Mine has four layers.</p>
+<ul>
+<li><strong>Tokens:</strong> the exact colors, type sizes and spacing, each with a name so nobody has to remember hex codes.</li>
+<li><strong>Components:</strong> the pieces I reuse constantly, like email headers, product cards, buttons and section layouts.</li>
+<li><strong>Voice rules:</strong> the words we use, the words we never use and how the brand sounds when it's excited versus when it's apologizing.</li>
+<li><strong>Real examples:</strong> past emails, pages and ads that show the rules in action.</li>
+</ul>
+</div>
+<div style="max-width: 820px; margin: 0 auto"><figure class="reveal" style="margin: 36px 0 44px; background: #FFFFFF; border: 2.5px solid #16132B; border-radius: 22px; box-shadow: 6px 6px 0 #16132B; padding: 26px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 22px; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="background: #F4B53F; border: 2.5px solid #16132B; border-radius: 12px; padding: 12px 16px; font-weight: 700">Tokens <span style="font-weight: 400">colors, type, spacing</span></div>
+<div style="background: #8FD0EC; border: 2.5px solid #16132B; border-radius: 12px; padding: 12px 16px; font-weight: 700">Components <span style="font-weight: 400">headers, cards, buttons</span></div>
+<div style="background: #EE5585; border: 2.5px solid #16132B; border-radius: 12px; padding: 12px 16px; font-weight: 700">Voice rules <span style="font-weight: 400">say this, never that</span></div>
+<div style="background: #F5F1EA; border: 2.5px solid #16132B; border-radius: 12px; padding: 12px 16px; font-weight: 700">Real examples <span style="font-weight: 400">past wins, in context</span></div>
+</div>
+<div class="mc" style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start">
+<div style="font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase">Feeds every channel</div>
+<div class="mc" style="display: flex; flex-wrap: wrap; gap: 8px">
+<span class="bob" style="border: 2px solid #16132B; border-radius: 999px; padding: 6px 14px; font-weight: 700; background: #FFFFFF">Email</span>
+<span class="bob" style="border: 2px solid #16132B; border-radius: 999px; padding: 6px 14px; font-weight: 700; background: #FFFFFF; animation-delay: -1s">Shopify</span>
+<span class="bob" style="border: 2px solid #16132B; border-radius: 999px; padding: 6px 14px; font-weight: 700; background: #FFFFFF; animation-delay: -2s">Paid social</span>
+<span class="bob" style="border: 2px solid #16132B; border-radius: 999px; padding: 6px 14px; font-weight: 700; background: #FFFFFF; animation-delay: -3s">Organic</span>
+<span class="bob" style="border: 2px solid #16132B; border-radius: 999px; padding: 6px 14px; font-weight: 700; background: #16132B; color: #F5F1EA; animation-delay: -4s">AI tools</span>
+</div>
+</div>
+<figcaption style="grid-column: 1 / -1; font-family: 'Space Mono', monospace; font-size: 13px">What a marketing design system holds, and where it goes.</figcaption>
+</figure></div>
+<div class="prose" style="max-width: 720px; margin: 0 auto">
+<h2>Why it matters more in marketing than people think</h2>
+<p>Marketing teams ship more often and across more channels than almost anyone else in a company. Without a system, each campaign drifts a little further from the last one, and customers pick up on it even if they couldn't explain what feels off.</p>
+<p>Having one changes a few things.</p>
+<ul>
+<li><strong>Speed.</strong> Every project starts halfway done instead of on a blank page.</li>
+<li><strong>Consistency.</strong> Emails, pages and ads feel like the same brand even when different people make them.</li>
+<li><strong>Room to play.</strong> With the basics locked in, I get to put my energy into the concept and the story. That's how you end up with an arcade-themed Black Friday.</li>
+</ul>
+</div>
+<div style="max-width: 820px; margin: 0 auto"><blockquote class="reveal mc" style="margin: 44px 0; background: #8FD0EC; border: 2.5px solid #16132B; border-radius: 22px; box-shadow: 6px 6px 0 #16132B; padding: 28px 30px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(26px, 3vw, 34px); line-height: 1.1; letter-spacing: -0.02em">"The system handles the rules, so you get to spend your time on the ideas."</blockquote></div>
+<div class="prose" style="max-width: 720px; margin: 0 auto">
+<h2>Your design system is also your best AI prompt</h2>
+<p>I didn't expect this part. Once the brands I work on had real design systems, the AI tools I use got a lot more useful.</p>
+<p>AI only knows what you tell it. If you ask for "a holiday email," you'll get something generic that could belong to anyone. When I give it our tokens, components, voice rules and a few past emails, the first draft comes back looking and sounding like us. It still needs edits, but it's on brand and much closer to done.</p>
+</div>
+<div style="max-width: 900px; margin: 0 auto"><figure class="reveal" style="margin: 36px 0 44px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 20px">
+<div style="background: #FFFFFF; border: 2.5px solid #16132B; border-radius: 20px; box-shadow: 6px 6px 0 #16132B; overflow: hidden">
+<div style="background: #EDE7DC; border-bottom: 2.5px solid #16132B; padding: 10px 16px; font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700">Without a system</div>
+<div style="padding: 18px; display: flex; flex-direction: column; gap: 12px">
+<div style="align-self: flex-end; background: #16132B; color: #F5F1EA; border-radius: 16px 16px 4px 16px; padding: 10px 14px; font-size: 15px">Make a holiday sale email.</div>
+<div style="background: #F5F1EA; border: 2px solid #16132B; border-radius: 16px 16px 16px 4px; padding: 10px 14px; font-size: 15px">A red and green banner, "Happy Holidays!" in a script font, stock snowflakes and a generic "Shop Now" button.</div>
+</div>
+</div>
+<div style="background: #FFFFFF; border: 2.5px solid #16132B; border-radius: 20px; box-shadow: 6px 6px 0 #F4B53F; overflow: hidden">
+<div style="background: #F4B53F; border-bottom: 2.5px solid #16132B; padding: 10px 16px; font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700">With a system</div>
+<div style="padding: 18px; display: flex; flex-direction: column; gap: 12px">
+<div style="align-self: flex-end; background: #16132B; color: #F5F1EA; border-radius: 16px 16px 4px 16px; padding: 10px 14px; font-size: 15px">Make a holiday sale email using our tokens, header, product cards and voice rules.</div>
+<div style="background: #F5F1EA; border: 2px solid #16132B; border-radius: 16px 16px 16px 4px; padding: 10px 14px; font-size: 15px">The brand's own colors and type, real product cards, the right words, and buttons that look like every other button you have shipped.</div>
+</div>
+</div>
+<figcaption style="grid-column: 1 / -1; font-family: 'Space Mono', monospace; font-size: 13px">Same request, very different first draft.</figcaption>
+</figure></div>
+<div class="prose" style="max-width: 720px; margin: 0 auto">
+<p>The design system used to be a document nobody opened. Now it's the instructions every tool works from, AI included.</p>
+
+<h2>Use AI as a super tool, not a replacement</h2>
+<p>A lot of people are worried that AI is coming for creative jobs. I think it's much more likely to leave behind the people who ignore it than the ones who learn to drive it.</p>
+<p>The way I see it, I'm the creative director and AI is a really fast production crew. It can rough out a Shopify section or write ten subject lines in a few minutes. It can't decide what's on brand, what's actually funny or what our customers care about this season. That judgment is still the job, and it's still ours.</p>
+</div>
+<div style="max-width: 820px; margin: 0 auto"><blockquote class="reveal mc" style="margin: 44px 0; background: #F4B53F; border: 2.5px solid #16132B; border-radius: 22px; box-shadow: 6px 6px 0 #16132B; padding: 28px 30px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(26px, 3vw, 34px); line-height: 1.1; letter-spacing: -0.02em">"The people who learn to drive AI are the ones it works for."</blockquote></div>
+<div class="prose" style="max-width: 720px; margin: 0 auto">
+<h2>How I stay up to date (without losing my mind)</h2>
+<p>AI tools change almost every week, and keeping up can feel like a lot. These habits help.</p>
+<ol>
+<li><strong>Try one new thing a week.</strong> It can be a feature, a tool or a different way of prompting. Small experiments add up.</li>
+<li><strong>Test it on real work.</strong> The best way to learn a tool is to point it at an actual campaign, not a toy example.</li>
+<li><strong>Keep what works and drop the rest.</strong> Not every shiny tool deserves a spot in your workflow.</li>
+<li><strong>Write down your wins.</strong> When a workflow saves you hours, turn it into a process you and your tools can repeat.</li>
+<li><strong>Share it with your team.</strong> One person's shortcut becomes everyone's head start.</li>
+</ol>
+
+<h2>Build your own: a starter checklist</h2>
+<p>If you want to build one for your brand, here's where I'd start.</p>
+<ol>
+<li><strong>Gather everything.</strong> Pull together your brand guidelines, packaging, best emails and top social posts.</li>
+<li><strong>Pull out the tokens.</strong> Give every color, font, size and button style a name.</li>
+<li><strong>Write the voice rules.</strong> A short list of do's and don'ts, plus the words you never say.</li>
+<li><strong>Build five core components.</strong> Start with an email header and footer, a product card, a button and one hero section.</li>
+<li><strong>Test it.</strong> Ask AI to make a new campaign using only your system, then fix what it gets wrong and update the rules.</li>
+<li><strong>Keep it alive.</strong> Every new campaign either uses the system or makes it better.</li>
+</ol>
+<p>The tools are going to keep changing. I think the brands that do well will be the ones that know exactly who they are and can hand that to any tool or teammate quickly.</p>
+<p><strong>Build the system. Then let AI play.</strong></p>
+</div>
+
+<div class="reveal mc" style="max-width: 820px; margin: 56px auto 0; background: #16132B; color: #F5F1EA; border: 2.5px solid #16132B; border-radius: 26px; box-shadow: 8px 8px 0 #EE5585; padding: clamp(26px, 4vw, 40px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px">
+<div class="mc" style="display: flex; flex-direction: column; max-width: 460px">
+<span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 28px; line-height: 1.1">See systems like this in action</span>
+<span style="margin-top: 6px; font-size: 16px; color: #E4DFF0">Live pages, emails and Shopify sections built on brand systems.</span>
+</div>
+<a href="index.html" class="btn btn-l" style="text-decoration: none; color: #16132B; background: #F4B53F; border: 2.5px solid #F5F1EA; border-radius: 999px; padding: 14px 26px; font-weight: 700; font-size: 17px; box-shadow: 5px 5px 0 #F5F1EA">See the work</a>
+</div>
+</article>
+<footer style="background: #16132B; color: #CFC9DD; border-top: 2.5px solid #16132B">
+<div class="mc" style="max-width: 1240px; margin: 0 auto; padding: 28px clamp(20px, 4vw, 48px) 36px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-family: 'Space Mono', monospace; font-size: 13px">
+<span>Lauren Mitchell / Louisville, KY</span>
+<span>Designed and built with Claude</span>
+</div>
+</footer>
+</div>
+</body>
+</html>
